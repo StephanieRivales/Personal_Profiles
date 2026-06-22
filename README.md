@@ -16,3 +16,4 @@ These are my prompts
 - use #7e3285 as the main color
 - make it responsive to any devices
 - add a button/function to view my certificates
+- what they are viewing ahould be the images of my certificates

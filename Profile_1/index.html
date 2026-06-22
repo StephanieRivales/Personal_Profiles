@@ -16,15 +16,6 @@
             <div class="profile-info">
                 <h1>STEPHANIE E. RIVALES</h1>
                 <h3>Computer Science Student</h3>
-
-                <p>
-                    Aspiring Computer Science professional passionate about
-                    technology, problem-solving, and continuous learning.
-                </p>
-
-                <button id="resumeBtn">
-                    Download Resume
-                </button>
             </div>
 
         </div>
@@ -32,6 +23,7 @@
 
     <main>
 
+        <!-- PROFILE -->
         <section>
             <h2>Profile</h2>
 
@@ -45,6 +37,7 @@
             </p>
         </section>
 
+        <!-- CONTACT -->
         <section>
             <h2>Contact Information</h2>
 
@@ -55,6 +48,7 @@
             </ul>
         </section>
 
+        <!-- SKILLS -->
         <section>
             <h2>Skills</h2>
 
@@ -67,6 +61,7 @@
             </div>
         </section>
 
+        <!-- LANGUAGES -->
         <section>
             <h2>Languages</h2>
 
@@ -77,6 +72,7 @@
             </div>
         </section>
 
+        <!-- EDUCATION -->
         <section>
             <h2>Education</h2>
 
@@ -102,6 +98,7 @@
             </div>
         </section>
 
+        <!-- EXPERIENCE -->
         <section>
             <h2>Experience & Certifications</h2>
 
@@ -118,6 +115,12 @@
             </div>
 
             <div class="card">
+                <h3>On-The Job Training</h3>
+                <p>Municipality of Agoo - Accounting Office</p>
+                <p>2026</p>
+            </div>
+
+            <div class="card">
                 <h3>Certificate for Data Science</h3>
                 <p>Cisco Networking Academy</p>
                 <p>2025</p>
@@ -128,8 +131,26 @@
                 <p>Great Learning</p>
                 <p>2025</p>
             </div>
+            <div class="card">
+                <h3>Certificate for Completion - On-The Job Training</h3>
+                <p>Municipality of Agoo, Accounting Office</p>
+                <p>2026</p>
+            </div>
+            <div class="card">
+                <h3>Certificate for Introduction to Natural Language Processing</h3>
+                <p>Great Learning</p>
+                <p>2026</p>
+            </div>
+
+            <div class="certificate-btn">
+                <button onclick="viewCertificates()">
+                    View My Certificates
+                </button>
+            </div>
+
         </section>
 
+        <!-- REFERENCE -->
         <section>
             <h2>Reference</h2>
 
@@ -139,59 +160,6 @@
                 <p><strong>Phone:</strong> 09176833011</p>
                 <p><strong>Email:</strong> dllavore@dmmmsu.edu.ph</p>
             </div>
-        </section>
-
-        <section class="hire-me">
-            <h2>Hire Me</h2>
-
-            <p>
-                Interested in working with me? Feel free to send me a message.
-                I am open to internships, OJT opportunities, freelance work,
-                and entry-level positions.
-            </p>
-
-            <form id="contactForm">
-
-                <input
-                    type="text"
-                    id="name"
-                    placeholder="Your Name"
-                    required
-                >
-
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="Your Email"
-                    required
-                >
-
-                <input
-                    type="text"
-                    id="subject"
-                    placeholder="Subject"
-                    required
-                >
-
-                <textarea
-                    id="message"
-                    rows="6"
-                    placeholder="Write your message here..."
-                    required
-                ></textarea>
-
-                <button type="submit">
-                    Send Message
-                </button>
-
-            </form>
-
-            <div class="download-section">
-                <button id="downloadProfile">
-                    Download My Profile
-                </button>
-            </div>
-
         </section>
 
     </main>

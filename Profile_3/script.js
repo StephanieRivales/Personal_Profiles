@@ -20,44 +20,49 @@ filterButtons.forEach(button => {
 });
 
 // 2. Hire Me Modal Functionality
-const modal = document.getElementById('hireModal');
+const hireModal = document.getElementById('hireModal');
 const openModalBtn = document.getElementById('openModalBtn');
 const closeModalBtn = document.getElementById('closeModalBtn');
 
-function openModal() {
-    modal.style.display = 'flex';
-}
-
-function closeModal() {
-    modal.style.display = 'none';
-}
-
-openModalBtn.addEventListener('click', openModal);
-closeModalBtn.addEventListener('click', closeModal);
-
-// Close modal if user clicks anywhere outside of the modal content box
-window.addEventListener('click', (e) => {
-    if (e.target === modal) {
-        closeModal();
-    }
+openModalBtn.addEventListener('click', () => {
+    hireModal.style.display = 'flex';
 });
 
-// 3. Contact Form Submission Handling
-const contactForm = document.getElementById('contactForm');
+closeModalBtn.addEventListener('click', () => {
+    hireModal.style.display = 'none';
+});
 
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault(); // Prevents page reload
+// 3. Certificate View Modal Functionality
+const certModal = document.getElementById('certModal');
+const closeCertModalBtn = document.getElementById('closeCertModalBtn');
+const certPreviewImg = document.getElementById('certPreviewImg');
+const certModalTitle = document.getElementById('certModalTitle');
+const viewCertButtons = document.querySelectorAll('.view-cert-btn');
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+viewCertButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const certSrc = btn.getAttribute('data-cert-src');
+        // Find the text description nearby to use as header title
+        const certName = btn.previousElementSibling.textContent;
+        
+        certPreviewImg.src = certSrc;
+        certModalTitle.textContent = certName;
+        certModal.style.display = 'flex';
+    });
+});
 
-    // Simulate sending message
-    console.log(`Message from ${name} (${email}): ${message}`);
+closeCertModalBtn.addEventListener('click', () => {
+    certModal.style.display = 'none';
+    certPreviewImg.src = ""; // Reset src on close
+});
 
-    // Clear form inputs
-    contactForm.reset();
-
-    // Trigger the confirmation popup modal
-    openModal();
+// Global window handling to close any active modal clicked from background overlay
+window.addEventListener('click', (e) => {
+    if (e.target === hireModal) {
+        hireModal.style.display = 'none';
+    }
+    if (e.target === certModal) {
+        certModal.style.display = 'none';
+        certPreviewImg.src = "";
+    }
 });

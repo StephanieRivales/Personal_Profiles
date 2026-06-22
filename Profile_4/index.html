@@ -8,14 +8,14 @@
 </head>
 <body>
 
-    <!-- Header Navigation -->
+    <!-- Responsive Top Header -->
     <header>
         <div class="brand-container">
             <div class="profile-photo-container">
                 <!-- Replace 'profile.jpg' with your actual image path -->
                 <img src="image.jfif" alt="Stephanie E. Rivales" class="profile-photo">
             </div>
-            <div class="logo">Stephanie E. Rivales</div>
+            <div class="logo">S.E. Rivales</div>
         </div>
         <nav>
             <a href="#about">About</a>
@@ -29,18 +29,18 @@
     <section id="about" class="hero">
         <div class="hero-content">
             <h1>Hi, I'm <span class="highlight">Stephanie E. Rivales</span></h1>
-            <h2>Student / Aspiring Computer Science Professional</h2>
+            <h2>Computer Science Student</h2>
             <blockquote class="about-quote">
                 "I am a Computer Science student who loves solving problems and learning how technology works. I am a hardworking and organized person looking to start my career in a professional team. My goal is to use what I've learned in school to help your company succeed while I continue to grow my technical skills."
             </blockquote>
             <div class="hero-buttons">
-                <a href="#experience" class="btn-primary">View Experience</a>
+                <button id="heroCertBtn" class="btn-primary">View Certificates</button>
                 <a href="#contact" class="btn-secondary">Get In Touch</a>
             </div>
         </div>
     </section>
 
-    <!-- Quick Info Grid (Skills, Languages, Reference) -->
+    <!-- Fluid Quick Info Grid -->
     <section class="info-summary-section">
         <div class="info-grid">
             <!-- Skills Card -->
@@ -77,7 +77,7 @@
         </div>
     </section>
 
-    <!-- Education Section -->
+    <!-- Education Timeline Section -->
     <section id="education" class="timeline-section">
         <h2 class="section-title">Education</h2>
         <div class="timeline">
@@ -93,7 +93,7 @@
                 <div class="timeline-date">2017 – 2023</div>
                 <div class="timeline-content">
                     <h3>President Elpidio Quirino National High School</h3>
-                    <h4>Junior High School & Senior High School (TVL-ICT)</h4>
+                    <h4>Junior & Senior High School (TVL-ICT)</h4>
                     <p class="location">San Agustin East, Agoo, La Union</p>
                 </div>
             </div>
@@ -107,14 +107,14 @@
         </div>
     </section>
 
-    <!-- Experience & Certifications Section -->
+    <!-- Filterable Cards Section -->
     <section id="experience" class="experience-section">
         <h2 class="section-title">Experience & Certifications</h2>
         
         <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="work">Experience</button>
-            <button class="filter-btn" data-filter="cert">Certificates</button>
+            <button class="filter-btn active" data-filter="all" id="filterBtnAll">All</button>
+            <button class="filter-btn" data-filter="work" id="filterBtnWork">Experience</button>
+            <button class="filter-btn" data-filter="cert" id="filterBtnCert">Certificates</button>
         </div>
 
         <div class="experience-grid">
@@ -137,44 +137,45 @@
             </div>
             <div class="exp-card" data-category="cert">
                 <span class="exp-badge cert-badge">Certification</span>
-                <h3>Introduction to Natural Language Processing</h3>
+                <h3>Intro to Natural Language Processing</h3>
                 <p class="sub-detail">Great Learning</p>
                 <span class="exp-date">2025</span>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Block Section -->
     <section id="contact" class="contact-section">
         <h2 class="section-title">Contact Information</h2>
         
         <div class="contact-container">
-            <div class="contact-info-panel">
+            <div class="contact-panel-card">
                 <div class="contact-item">
                     <span class="icon">📞</span>
-                    <p>0967 008 6130</p>
+                    <div>
+                        <span class="contact-label">Phone Number</span>
+                        <p>0967 008 6130</p>
+                    </div>
                 </div>
                 <div class="contact-item">
                     <span class="icon">📧</span>
-                    <p><a href="mailto:yurianeyuuu@gmail.com">yurianeyuuu@gmail.com</a></p>
+                    <div>
+                        <span class="contact-label">Email Address</span>
+                        <p><a href="mailto:yurianeyuuu@gmail.com">yurianeyuuu@gmail.com</a></p>
+                    </div>
                 </div>
                 <div class="contact-item">
                     <span class="icon">📍</span>
-                    <p>Macalva Norte, Agoo, La Union</p>
+                    <div>
+                        <span class="contact-label">Location</span>
+                        <p>Macalva Norte, Agoo, La Union</p>
+                    </div>
                 </div>
             </div>
-
-            <form id="contactForm" class="contact-form">
-                <input type="text" id="name" placeholder="Your Name" required>
-                <input type="email" id="email" placeholder="Your Email" required>
-                <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn-submit">Send Message</button>
-                <div id="formFeedback" class="form-feedback"></div>
-            </form>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Global Footer -->
     <footer>
         <p>&copy; 2026 Stephanie E. Rivales. All Rights Reserved.</p>
     </footer>

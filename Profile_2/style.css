@@ -90,6 +90,27 @@ section {
   background: #f9f9f9;
 }
 
+.cert-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.cert-gallery img {
+  width: 200px;
+  height: auto;
+  border: 2px solid #7e3285;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.cert-gallery img:hover {
+  transform: scale(1.05);
+}
+
+
 /* Footer */
 footer {
   background: #7e3285;

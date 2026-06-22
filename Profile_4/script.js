@@ -1,48 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const expCards = document.querySelectorAll('.exp-card');
-    
-    // Universal Structural Filtering Logic Engine
-    function applyCategoryFilter(filterValue) {
-        expCards.forEach(card => {
-            const cardCategory = card.getAttribute('data-category');
-            
-            if (filterValue === 'all' || filterValue === cardCategory) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
-        });
-    }
+    const certModal = document.getElementById('certModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalClose = document.querySelector('.modal-close');
+    const certImages = document.querySelectorAll('.cert-preview-img');
 
-    // Dynamic Filter Trigger Configuration Setup
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-
-            const filterValue = button.getAttribute('data-filter');
-            applyCategoryFilter(filterValue);
+    // Click on any certificate picture to show it full-screen
+    certImages.forEach(img => {
+        img.addEventListener('click', () => {
+            modalImage.src = img.src;
+            certModal.style.display = 'flex';
         });
     });
 
-    // Hero Quick Navigation Target Hook Setup
-    const heroCertBtn = document.getElementById('heroCertBtn');
-    const filterBtnCert = document.getElementById('filterBtnCert');
-    const experienceSection = document.getElementById('experience');
+    // Close the image popup when clicking the 'X' button
+    if (modalClose && certModal) {
+        modalClose.addEventListener('click', () => {
+            certModal.style.display = 'none';
+        });
 
-    if (heroCertBtn && filterBtnCert && experienceSection) {
-        heroCertBtn.addEventListener('click', () => {
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            filterBtnCert.classList.add('active');
-            applyCategoryFilter('cert');
-
-            // Responsive offset calculations to balance scroll targets
-            const yOffset = -80; 
-            const yPosition = experienceSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-            window.scrollTo({ top: yPosition, behavior: 'smooth' });
+        // Close the image popup if you click anywhere on the dark background
+        certModal.addEventListener('click', (e) => {
+            if (e.target === certModal) {
+                certModal.style.display = 'none';
+            }
         });
     }
 });

@@ -8,11 +8,11 @@
 </head>
 <body>
 
-    <!-- Responsive Top Header -->
+    <!-- Top Navigation Header -->
     <header>
         <div class="brand-container">
             <div class="profile-photo-container">
-                <!-- Replace 'profile.jpg' with your actual image path -->
+                <!-- Replace 'profile.jpg' with your real profile image filename -->
                 <img src="image.jfif" alt="Stephanie E. Rivales" class="profile-photo">
             </div>
             <div class="logo">S.E. Rivales</div>
@@ -34,16 +34,16 @@
                 "I am a Computer Science student who loves solving problems and learning how technology works. I am a hardworking and organized person looking to start my career in a professional team. My goal is to use what I've learned in school to help your company succeed while I continue to grow my technical skills."
             </blockquote>
             <div class="hero-buttons">
-                <button id="heroCertBtn" class="btn-primary">View Certificates</button>
+                <!-- Simple standard anchor scroll to the certificates section -->
+                <a href="#experience" class="btn-primary">View Certificates</a>
                 <a href="#contact" class="btn-secondary">Get In Touch</a>
             </div>
         </div>
     </section>
 
-    <!-- Fluid Quick Info Grid -->
+    <!-- Quick Info Cards -->
     <section class="info-summary-section">
         <div class="info-grid">
-            <!-- Skills Card -->
             <div class="info-card">
                 <h3>Skills</h3>
                 <ul>
@@ -54,7 +54,6 @@
                 </ul>
             </div>
 
-            <!-- Languages Card -->
             <div class="info-card">
                 <h3>Languages</h3>
                 <ul>
@@ -64,7 +63,6 @@
                 </ul>
             </div>
 
-            <!-- Reference Card -->
             <div class="info-card">
                 <h3>Reference</h3>
                 <div class="reference-details">
@@ -107,47 +105,70 @@
         </div>
     </section>
 
-    <!-- Filterable Cards Section -->
+    <!-- Certifications Image Gallery Section -->
     <section id="experience" class="experience-section">
-        <h2 class="section-title">Experience & Certifications</h2>
+        <h2 class="section-title">Certifications & Experience</h2>
         
-        <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all" id="filterBtnAll">All</button>
-            <button class="filter-btn" data-filter="work" id="filterBtnWork">Experience</button>
-            <button class="filter-btn" data-filter="cert" id="filterBtnCert">Certificates</button>
-        </div>
-
         <div class="experience-grid">
-            <div class="exp-card" data-category="work">
-                <span class="exp-badge work-badge">Work Immersion</span>
-                <h3>Municipality of Agoo</h3>
-                <p class="sub-detail">Agriculture Department</p>
-                <span class="exp-date">2022</span>
-            </div>
-            <div class="exp-card" data-category="work">
-                <span class="exp-badge work-badge">NC II Training</span>
-                <h3>South Ilocandia College of Arts & Technology</h3>
-                <span class="exp-date">2023</span>
-            </div>
-            <div class="exp-card" data-category="cert">
+            <!-- Certificate Item 1 -->
+            <div class="exp-card">
                 <span class="exp-badge cert-badge">Certification</span>
                 <h3>Data Science</h3>
-                <p class="sub-detail">Cisco Networking Academy</p>
-                <span class="exp-date">2025</span>
+                <p class="sub-detail">Cisco Networking Academy (2025)</p>
+                <div class="cert-image-container">
+                    <!-- Replace 'cisco-cert.jpg' with your real certificate filename -->
+                    <img src="ds.jpg" alt="Cisco Data Science Certificate" class="cert-preview-img">
+                </div>
             </div>
-            <div class="exp-card" data-category="cert">
+            
+            <!-- Certificate Item 2 -->
+            <div class="exp-card">
                 <span class="exp-badge cert-badge">Certification</span>
-                <h3>Intro to Natural Language Processing</h3>
-                <p class="sub-detail">Great Learning</p>
-                <span class="exp-date">2025</span>
+                <h3>AI Fluency: Framework & Foundations</h3>
+                <p class="sub-detail">ANTHROP\C (2026)</p>
+                <div class="cert-image-container">
+                    <!-- Replace 'nlp-cert.jpg' with your real certificate filename -->
+                    <img src="fluency.jpg" alt="AI Fluency Certificate" class="cert-preview-img">
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <span class="exp-badge cert-badge">Certification</span>
+                <h3>On-The Job Training</h3>
+                <p class="sub-detail">Municipality of Agoo (2026)</p>
+                <div class="cert-image-container">
+                    <!-- Replace 'nlp-cert.jpg' with your real certificate filename -->
+                    <img src="ojt.jpg" alt="OJT Certificate" class="cert-preview-img">
+                </div>
+            </div>
+
+            <!-- Standard Experience Items -->
+            <div class="exp-card">
+                <span class="exp-badge work-badge">Work Immersion</span>
+                <h3>Municipality of Agoo</h3>
+                <p class="sub-detail">Agriculture Department (2022)</p>
+            </div>
+            <div class="exp-card">
+                <span class="exp-badge work-badge">On-The Job Training</span>
+                <h3>Municipality of Agoo</h3>
+                <p class="sub-detail">Accounting Office (2026)</p>
+            </div>
+            <div class="exp-card">
+                <span class="exp-badge work-badge">NC II Training</span>
+                <h3>South Ilocandia College of Arts & Technology (2023)</h3>
             </div>
         </div>
     </section>
 
+    <!-- Image Pop-up Window Modal (Lightbox) -->
+    <div id="certModal" class="modal-overlay">
+        <span class="modal-close">&times;</span>
+        <img id="modalImage" src="" alt="Full Certificate View" class="modal-img">
+    </div>
+
     <!-- Contact Block Section -->
     <section id="contact" class="contact-section">
         <h2 class="section-title">Contact Information</h2>
-        
         <div class="contact-container">
             <div class="contact-panel-card">
                 <div class="contact-item">
